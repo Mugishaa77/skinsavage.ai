@@ -1,0 +1,42 @@
+:root {
+    --brown-one: #a6603a;
+    --brown-two: #bc9b88;
+    --yellow: #eee2b7;
+    --ceo-msg-bg: linear-gradient(to top, #8a4016 0%, #8a4016 50%, #a68e7f 100%);
+}
+
+.hero {
+    background-color: var(--brown-one);
+    color: var(--yellow);
+    height: 90vh;
+}
+
+.intro {
+    background-color: var(--yellow);
+    color: var(--brown-one);
+    height: 90vh;
+}
+
+.selection {
+   background-color: var(--brown-one);
+    color: var(--yellow);
+    height: 90vh;
+}
+
+.statement {
+    background-color: var(--yellow);
+    color: var(--brown-one);
+    height: 90vh;
+}
+
+.ceo-msg {
+    background: var(--ceo-msg-bg);
+    color: var(--yellow);
+    height: 90vh;
+}
+
+.contact {
+    background-color: var(--yellow);
+    color: var(--brown-one);
+    height: 90vh;
+}

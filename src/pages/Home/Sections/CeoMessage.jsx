@@ -1,6 +1,6 @@
 export default function CeoMessage() {
   return (
-    <div className="">
+    <div className="ceo-msg">
       <h1 className="">No more influencer hype. No more wasted
 money. Just smart, confident skincare that fits
 your skin !
