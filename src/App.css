@@ -5,38 +5,348 @@
     --ceo-msg-bg: linear-gradient(to top, #8a4016 0%, #8a4016 50%, #a68e7f 100%);
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+   font-family: 'Cormorant Garamond', serif; /* or use your downloaded font */    
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Navbar.css */
+
+.navbar {
+    height: 70px;
+    padding: 2px;
+}
+
+.navbar-container {
+     display: flex;
+}
+
+.logo {
+    flex: 1;
+    background-color: var(--brown-one);
+    height: 70px;
+    color: var(--yellow);
+    
+}
+
+.logo h2 {
+    padding: 1rem;
+    font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.navbar-links {
+    flex: 1;
+    
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+  
+
+}
+
+ul.nav-links li a {
+    text-decoration: none;
+    background-color: var(--brown-two);
+    border-radius: 10px;
+    padding: 2rem;
+    color: black;
+    text-transform: none;
+    margin: 5px;
+    height: 60px;
+    font-size: 1rem;
+  font-weight: 500;
+
+}
+
 .hero {
     background-color: var(--brown-one);
     color: var(--yellow);
     height: 90vh;
+    display: flex;
+}
+
+
+.hero-txt {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-txt button {
+    padding: 1rem;
+    background-color: var(--brown-one);
+    color: var(--yellow);
+    border: 1px solid var(--yellow);
+    margin: 5px;
+}
+
+/* === Hero Section === */
+.hero-txt h1, .hero-txt h2 {
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.hero-txt p {
+  font-size: 1.125rem;
+  max-width: 600px;
+}
+
+.hero-image {
+    flex:1;
+    background-image: url('./assets/photos/home.png');
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+    height: 90vh;
 }
 
 .intro {
+    display: flex;
     background-color: var(--yellow);
     color: var(--brown-one);
     height: 90vh;
+    
+}
+
+.intro-image {
+    flex: 1;
+    background-image: url('./assets/photos/intro.png');
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+    height: 90vh;
+}
+
+.intro-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.intro-text .txt {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .selection {
    background-color: var(--brown-one);
     color: var(--yellow);
-    height: 90vh;
+    height: 90vh;  
+    padding: 2rem;  
+}
+
+.selection h2 {
+    font-size: 2.8rem;
+    font-weight: 500;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    margin-left: 2rem;
+}
+
+.selection ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+}
+    
+.selection ul li {
+
+    padding: 1rem;
+    text-align: center;
 }
 
 .statement {
     background-color: var(--yellow);
     color: var(--brown-one);
     height: 90vh;
+    
 }
+
+.statement h2 {
+  font-size: 2.8rem;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.statement h3 {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.4;
+  margin-bottom: 2rem;
+}
+
+.statement h5 {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.6;
+  
+  max-width: 500px;
+}
+
 
 .ceo-msg {
     background: var(--ceo-msg-bg);
     color: var(--yellow);
     height: 90vh;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+     
 }
+
+.ceo-msg-txt {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
 
 .contact {
     background-color: var(--yellow);
     color: var(--brown-one);
     height: 90vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.contact-one {
+    flex: 1;
+    margin: 2rem;
+}
+.contact h3 {
+    padding: 1rem;
+}
+
+.contact h2 {
+    padding: 1rem;
+}
+
+.contact img {
+   
+    display: block;
+    margin: 0 auto;
+}
+.contact-two {
+    flex: 1;
+}
+
+.contact-two ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* === General Typography === */
+body {
+  font-size: 16px;
+  font-family: 'Inter', sans-serif; /* or your preferred font */
+  line-height: 1.6;
+}
+
+/* === Navbar === */
+.logo h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+ul.nav-links li a {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* === Hero Section === */
+.hero-txt h1, .hero-txt h2 {
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.hero-txt p {
+  font-size: 1.125rem;
+  max-width: 600px;
+}
+
+/* === Intro Section === */
+.intro-text .txt h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+.intro-text .txt p {
+  font-size: 1.1rem;
+  max-width: 600px;
+  line-height: 1.7;
+  padding: 0.5rem 0;
+}
+
+/* === Selection Section === */
+.selection h2 {
+  font-size: 2.5rem;
+}
+
+.selection ul li {
+  font-size: 1.1rem;
+}
+
+/* === Statement Section === */
+.statement h2 {
+  font-size: 2.5rem;
+}
+
+.statement h3 {
+  font-size: 1.5rem;
+}
+
+.statement h5 {
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+/* === CEO Message Section === */
+.ceo-msg-txt h2 {
+  font-size: 2.5rem;
+}
+
+.ceo-msg-txt p {
+  font-size: 1.1rem;
+  max-width: 600px;
+}
+
+/* === Contact Section === */
+.contact h2 {
+  font-size: 2rem;
+}
+
+.contact h3 {
+  font-size: 1.25rem;
+}
+
+.contact-two ul li {
+  font-size: 1rem;
 }

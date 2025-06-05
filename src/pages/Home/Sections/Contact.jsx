@@ -1,9 +1,15 @@
+import ContactImg from '../../../assets/photos/contact.png';
+
 export default function Contact() {
   return (
     <div className="contact">
-      <h6>SKINSAVAGE.AI</h6>
+      <div className="contact-one">
+        <h3>SKINSAVAGE.AI</h3>
       <h2>Get in Touch</h2>
-      <ul>
+      <img src={ContactImg} alt="Contact Us" />
+      </div>
+      <div className='contact-two'>
+        <ul>
         <li>
             <h5>Mailing Address</h5>
             <p>Nation Centre, CBD Nairobi - Kenya.</p>
@@ -19,6 +25,7 @@ export default function Contact() {
             <p>(254) 794 582576 </p>
         </li>
       </ul>
+      </div>
     </div>
   )
 }
