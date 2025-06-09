@@ -3,7 +3,7 @@ export default function Navbar() {
     <nav className="navbar">
       <div className="navbar-container">
         <div className="logo">
-          <h2>Skinsavage.ai</h2>
+          <h4>Skinsavage.ai</h4>
         </div>
       <div className="navbar-links">
           <ul className="nav-links">

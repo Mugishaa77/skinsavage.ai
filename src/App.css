@@ -14,68 +14,92 @@
 
   /* Fonts */
   --garbata: 'Garbata', serif;
+  --inter: "Inter", sans-serif;
 }
 
-* {
+/* === Global Reset === */
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body {
+html, body {
   margin: 0;
   padding: 0;
-  font-size: 16px;
-  line-height: 1.6;
-  font-family: var(--garbata); /* Now uses Garbata */
 }
 
 /* === Navbar === */
 .navbar {
-  height: 70px;
-  padding: 2px;
+  height: 50px;
+  padding: 0;
+  width: 100%;
 }
 
 .navbar-container {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
 }
 
+/* === Logo === */
 .logo {
   flex: 1;
   background-color: var(--brown-one);
-  height: 70px;
   color: var(--yellow);
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  padding-left: 1rem;
+  height: 100%;
+  font-family: var(--garbata);
+  
 }
 
-.logo h2 {
-  padding: 1rem;
+.logo h4 {
   font-size: 1.5rem;
   font-weight: 600;
+  margin-left: 1rem;
 }
 
+/* === Navbar Links === */
 .navbar-links {
   flex: 1;
   background-color: #D7E6E3;
+  display: flex;
+  justify-content: flex-end;
+  align-items:flex-start;
+  height: 100%;
+  padding-right: 1rem;
 }
 
 .nav-links {
-  list-style-type: none;
+  list-style: none;
   display: flex;
-  justify-content: space-between;
-  background-color: #D7E6E3;
+  align-items: space-between;
+  gap: 1rem;
 }
 
-ul.nav-links li a {
+.nav-links li a {
   text-decoration: none;
   background-color: var(--brown-two);
   border-radius: 10px;
-  padding: 2rem;
+  padding: 0.5rem 1rem;
   color: black;
-  margin: 5px;
-  height: 60px;
   font-size: 1rem;
-  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  text-transform: uppercase;
+  font-family: var(--inter);
+  font-weight: 400;
+  
 }
+
 
 /* === Hero Section === */
 .hero {
@@ -89,15 +113,19 @@ ul.nav-links li a {
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  align-items: flex-start;
+  justify-content: flex-end;
+  text-align: left;
+  
+ 
 }
 
 .hero-txt h1 {
   font-family: var(--garbata); /* Uses Garbata */
   font-size: 3rem;
-  font-weight: 600;
+  font-weight: 400;
+  line-height: 1;
+  margin-left: 3rem;
 }
 
 .hero-txt h2 {
@@ -114,8 +142,19 @@ ul.nav-links li a {
   padding: 1rem;
   background-color: var(--brown-one);
   color: var(--yellow);
-  border: 1px solid var(--yellow);
+  border: 2px solid var(--yellow);
   margin: 5px;
+  margin-left: 3rem;
+  margin-bottom: 5rem;
+  font-weight: 600;
+  font-family:var(--inter);
+}
+
+.hero-txt button:hover {
+  background-color: var(--yellow);
+  color: var(--brown-one);
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .hero-image {
@@ -139,7 +178,7 @@ ul.nav-links li a {
   flex: 1;
   background-image: url('./assets/photos/intro.png');
   background-size: cover;
-  background-position: right;
+  background-position: center;
   background-repeat: no-repeat;
   height: 90vh;
 }
@@ -150,62 +189,106 @@ ul.nav-links li a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
+  text-align: left;
+ 
 }
 
 .intro-text .txt h2 {
   font-size: 2.5rem;
-  font-weight: 600;
+  font-weight: 400;
+  font-family: var(--garbata);
+  margin: 1rem;
+  padding: 0 1rem;
+  text-align: left;
+  line-height: 1.2;
+  margin-left: 2rem;
 }
 
 .intro-text .txt p {
   font-size: 1.1rem;
-  max-width: 600px;
-  line-height: 1.7;
-  padding: 0.5rem 0;
+  max-width: 500px;
+  line-height: 1.2;
+    padding: 0 1rem;
+  margin: 1rem;
+  font-family: var(--garbata);
+  font-weight: 300;
+  margin-left: 1rem;
 }
 
 /* === Selection Section === */
 .selection {
   background-color: var(--brown-one);
   color: var(--yellow);
-  height: 90vh;
+  min-height: 90vh;
   padding: 2rem;
+  box-sizing: border-box;
+ 
 }
 
 .selection h2 {
   font-size: 2.5rem;
   font-weight: 500;
-  line-height: 1.2;
-  margin-bottom: 1rem;
-  margin-left: 2rem;
+ margin: 1rem;
+  font-family: var(--garbata);
+  margin-bottom: 2rem;
 }
 
 .selection ul {
   list-style-type: none;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  gap: 2rem;
   padding: 0;
+  margin: 1rem;
 }
 
 .selection ul li {
-  padding: 1rem;
+  flex: 1;
+  max-width: 33.33%;
+  box-sizing: border-box;
   text-align: center;
-  font-size: 1.1rem;
+}
+
+.selection ul li img {
+  width: 100%;
+  height: auto;
+  object-fit: fill;
+  max-height: 250px;
+ 
+}
+
+.selection ul li h4 {
+  font-size: 1.3rem;
+  margin-top: 1rem;
+  font-family: var(--garbata);
+  font-weight: 400;
+}
+
+.selection ul li p {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  padding: 0 1rem;
+  font-family: var(--garbata);
+  font-weight: 300;
+  line-height: 1.5;
 }
 
 /* === Statement Section === */
 .statement {
-  background-color: var(--yellow);
+ background-color: var(--yellow);
   color: var(--brown-one);
   height: 90vh;
+  font-family: var(--garbata);
+  position: relative;
+  padding: 3rem;
+  box-sizing: border-box;
 }
 
 .statement h2 {
   font-size: 2.5rem;
   font-weight: 500;
   line-height: 1.2;
-  margin-bottom: 1rem;
+  padding: 2rem;
 }
 
 .statement h3 {
@@ -213,13 +296,19 @@ ul.nav-links li a {
   font-weight: 400;
   line-height: 1.4;
   margin-bottom: 2rem;
+ display: flex;
+  justify-content: center;
 }
 
-.statement h5 {
-  font-size: 1rem;
+.statement h4 {
+   font-size: 1rem;
   font-weight: 400;
   line-height: 1.7;
   max-width: 500px;
+  position: absolute;
+  bottom: 5rem;
+  right: 5rem;
+  text-align: right;
 }
 
 /* === CEO Message Section === */
@@ -241,13 +330,17 @@ ul.nav-links li a {
   text-align: center;
 }
 
-.ceo-msg-txt h2 {
+.ceo-msg-txt h1 {
   font-size: 2.5rem;
+  font-family: var(--inter);
+  font-weight: 300;
+  line-height: 1.5;
+  margin-bottom: 1rem
 }
 
-.ceo-msg-txt p {
-  font-size: 1.1rem;
-  max-width: 600px;
+.ceo-msg-txt h2 {
+  font-weight: 400;
+  margin-top: 0.5rem;
 }
 
 /* === Contact Section === */
@@ -257,16 +350,15 @@ ul.nav-links li a {
   height: 90vh;
   display: flex;
   flex-direction: row;
+  font-family: var(--garbata)
 }
 
 .contact-one {
   flex: 1;
   margin: 2rem;
-}
+  text-align: left;
+  margin-left: 5rem;
 
-.contact h2 {
-  padding: 1rem;
-  font-size: 2rem;
 }
 
 .contact h3 {
@@ -274,20 +366,48 @@ ul.nav-links li a {
   font-size: 1.25rem;
 }
 
+.contact h1 {
+  padding: 1rem;
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+
 .contact img {
-  display: block;
-  margin: 0 auto;
+  width: 80%;
+  height: auto;
+  margin-left: 1rem;
+  margin-top: 1rem;
 }
 
 .contact-two {
   flex: 1;
+  margin-top: 5rem;
+  padding-top: 5rem;
 }
 
 .contact-two ul {
   list-style-type: none;
   padding: 0;
+  padding-top: 1rem;
 }
 
 .contact-two ul li {
   font-size: 1rem;
+  margin: 1rem;
+}
+
+.contact-two h3 {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  font-weight: 00;
+}
+
+.contact-two ul li a {
+  text-decoration: none;
+  color: var(--brown-one);
+}
+
+.contact-two ul li a:hover {
+  text-decoration: underline;
 }
