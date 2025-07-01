@@ -1,18 +1,33 @@
 export default function Navbar() {
   return (
-    <nav className="navbar">
-      <div className="navbar-container">
+    <header className="navbar" role="banner">
+      <nav className="navbar-container" role="navigation" aria-label="Main navigation">
         <div className="logo">
-          <h4>Skinsavage.ai</h4>
+          <a href="/" aria-label="Skinsavage.ai homepage">
+            <h1>Skinsavage.ai</h1>
+          </a>
         </div>
-      <div className="navbar-links">
-          <ul className="nav-links">
-          <li><a href="/">Brands</a></li>
-          <li><a href="/about">About Us</a></li>
-          <li><a href="/contact">Contact Us</a></li>
-        </ul>
+        
+        <div className="navbar-links">
+          <ul className="nav-links" role="menubar">
+            <li role="none">
+              <a href="/brands" role="menuitem" aria-label="Browse brands">
+                Brands
+              </a>
+            </li>
+            <li role="none">
+              <a href="/about" role="menuitem" aria-label="Learn about us">
+                About Us
+              </a>
+            </li>
+            <li role="none">
+              <a href="/contact" role="menuitem" aria-label="Contact information">
+                Contact Us
+              </a>
+            </li>
+          </ul>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </header>
   );
 }
